@@ -1,0 +1,227 @@
+:root{
+   --primary: #1B9CE2;
+   --dark: #212121; 
+   --gray: #747474;
+}
+
+body{
+    margin: 0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+}header {
+  background-color: white;
+  box-shadow: 1px 1px 5px var(--gray);
+  height: 60px;
+  padding: 0 20px;
+  color: var(--dark);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+header .month {
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+header .header-left,
+header .header-right {
+  display: flex;
+  align-items: center;
+}
+
+header .today{
+  padding-right: 15px;
+}
+
+#blind-header{
+  margin-top: 60px;
+}#calendar {
+  display: grid;
+  grid-template-rows: repeat(24, 50px);
+  align-items: center;
+  --left-space: 70px;
+  margin-right: 15px;
+}
+
+#calendar .hour::before {
+  content: "";
+  display: inline-block;
+  color: var(--gray);
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 12px;
+  font-weight: 300;
+  margin-left: calc(20px - var(--left-space));
+  margin-top: -53px;
+}
+
+#calendar .hour {
+  border-bottom: 1px solid #f3f3f3;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 70px;
+  box-sizing: border-box;
+}
+
+#calendar .hour-0::before {
+  content: "12 AM";
+}
+#calendar .hour-1::before {
+  content: "1 AM";
+}
+#calendar .hour-2::before {
+  content: "2 AM";
+}
+#calendar .hour-3::before {
+  content: "3 AM";
+}
+#calendar .hour-4::before {
+  content: "4 AM";
+}
+#calendar .hour-5::before {
+  content: "5 AM";
+}
+#calendar .hour-6::before {
+  content: "6 AM";
+}
+#calendar .hour-7::before {
+  content: "7 AM";
+}
+#calendar .hour-8::before {
+  content: "8 AM";
+}
+#calendar .hour-9::before {
+  content: "9 AM";
+}
+#calendar .hour-10::before {
+  content: "10 AM";
+}
+#calendar .hour-11::before {
+  content: "11 AM";
+}
+#calendar .hour-12::before {
+  content: "12 PM";
+}
+#calendar .hour-13::before {
+  content: "1 PM";
+}
+#calendar .hour-14::before {
+  content: "2 PM";
+}
+#calendar .hour-15::before {
+  content: "3 PM";
+}
+#calendar .hour-16::before {
+  content: "4 PM";
+}
+#calendar .hour-17::before {
+  content: "5 PM";
+}
+#calendar .hour-18::before {
+  content: "6 PM";
+}
+#calendar .hour-19::before {
+  content: "7 PM";
+}
+#calendar .hour-20::before {
+  content: "8 PM";
+}
+#calendar .hour-21::before {
+  content: "9 PM";
+}
+#calendar .hour-22::before {
+  content: "10 PM";
+}
+#calendar .hour-23::before {
+  content: "11 PM";
+}
+
+#calendar .new-event {
+  color: white;
+  padding-left: 7px;
+  font-size: 12px;
+  align-self: start;
+  padding-top: 4px;
+  font-weight: 500;
+  opacity: 0;
+}
+#calendar .new-event::after{
+    content: '+ New event';
+}
+#calendar .highlighted .new-event{
+    opacity: 1;
+}
+
+#calendar .highlighted {
+  background-color: rgba(27, 156, 226, 0.8);
+  border-radius: 4px;
+  content: "New event";
+}
+
+#today {
+  color: var(--primary);
+  position: fixed;
+  padding: 18px 18px 5px 18px;
+  background-color: white;
+  box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-weight: 500;
+}
+#today-after {
+  background-image: linear-gradient(
+    180deg,
+    white,
+    transparent 50%,
+    transparent 50%
+  );
+  height: 45px;
+  position: fixed;
+  top: 125px;
+  width: 32px;
+  left: 14px;
+}
+
+#today-number {
+  padding-left: 3px;
+  font-size: 24px;
+}
+#today-short {
+  font-size: 14px;
+}
+#events {
+  position: absolute;
+  right: 15px;
+  left: 70px;
+}
+
+.event {
+  background-color: rgb(27, 156, 226);
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: white;
+  padding-top: 4px;
+  padding-left: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.fab {
+  background-color: #d9453d;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
